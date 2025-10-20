@@ -1,5 +1,5 @@
 // import './App.css';
-import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
 import store from './store';
