@@ -4,19 +4,26 @@ import ScrollToTop from "../../components/others/ScrollToTop";
 import Home from '../../containers/pages/Home';
 import Error404 from '../../containers/errors/Error404';
 import Developer from '../../containers/pages/Developer';
+import About from '../../containers/pages/About';
+import Contact from '../../containers/pages/Contact'; 
+
+<Route path="/contact" element={<Contact />} />
+
 
 function AnimatedRoutes() {    
     const location = useLocation();
     return (
         <>
-            {/* Este componente reestablece la posición del scroll al inicio de la página */}
+           
             <ScrollToTop />
                 <Routes location={location} key={location.pathname}>
                 <Route path="*" element={<Error404/>}/>
     
                 <Route path="/" element={<Home/>}/>
                 <Route path="/inicio" element={<Home/>}/>
+                <Route path="/about" element={<About/>}/>
                 <Route path="/developer" element={<Developer/>}/>
+                <Route path="/contact" element={<Contact/>}/>
 
                
           </Routes>

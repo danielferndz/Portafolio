@@ -10,16 +10,21 @@ import Layout from "../../hocs/layouts/Layout"
 function Developer (){
 
     return(
-        <Layout>
-            <DeveloperHeroSection/>
-            <DeveloperAboutSection/>
-            <DeveloperSkillSection/>
-            <DeveloperProjectSection/>
-            <DeveloperTestimonialSection/>
-            <DeveloperContactSection/>
+        <div className="dark bg-fondoDev text-white min-h-screen">
 
-        </Layout>
-    )
+            <Layout>
+                <DeveloperHeroSection/>
+                <DeveloperAboutSection/>
+                <DeveloperSkillSection/>
+                <DeveloperProjectSection/>
+                <DeveloperTestimonialSection/>
+                <DeveloperContactSection/>
+
+            </Layout>
+
+        </div>
+        
+    )   
 
 }
 export default Developer

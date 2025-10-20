@@ -2,7 +2,6 @@
 import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
-import 'leaflet/dist/leaflet.css';
 import store from './store';
 import AnimatedRoutes from './hocs/routes/Routes';
 

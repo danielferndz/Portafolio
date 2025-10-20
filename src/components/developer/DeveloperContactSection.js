@@ -76,9 +76,9 @@ export default function DeveloperContactSection({ isDark }) {
 
             <div className="space-y-6 mb-8">
               {[
-                { icon: Mail, text: "email@email.com", href: "mailto:email@email.com" },
-                { icon: Phone, text: "+1 (555) 123-4567", href: "tel:+15551234567" },
-                { icon: MapPin, text: "San Francisco, CA", href: "#" }
+                { icon: Mail, text: "ldanielferndz@gmail.com", href: "daniel:ldanielferndz@gmail.com" },
+                { icon: Phone, text: "+55 (95) 8425-9581", href: "tel:+559884259581" },
+                { icon: MapPin, text: "Brasil, Rio de Janeiro", href: "#" }
               ].map((contact, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl">

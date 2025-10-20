@@ -1,11 +1,9 @@
-
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Download, Mail } from "lucide-react";
 import Button from "../ui/button";
 
-
-export default function DeveloperHeroSection({ isDark }) {
+export default function DeveloperHeroSection() {
   const [displayText, setDisplayText] = useState("");
   const roles = ["Modern Web Developer", "UI/UX Designer", "Frontend Expert"];
   const [currentRole, setCurrentRole] = useState(0);
@@ -42,21 +40,18 @@ export default function DeveloperHeroSection({ isDark }) {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative bg-fondoDev text-white">
       <div className="max-w-6xl mx-auto text-center relative z-10">
+        
         {/* ✅ Título principal */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1
-            className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-6 ${
-              isDark ? "text-white" : "text-gray-900"
-            }`}
-          >
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
             Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">
               Prince
             </span>
           </h1>
@@ -69,22 +64,14 @@ export default function DeveloperHeroSection({ isDark }) {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-8"
         >
-          <h2
-            className={`text-2xl md:text-4xl lg:text-5xl font-light mb-4 ${
-              isDark ? "text-gray-200" : "text-gray-700"
-            }`}
-          >
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light mb-4 text-gray-200">
             I'm a{" "}
-            <span className="font-medium text-blue-500 min-w-[300px] inline-block text-left">
+            <span className="font-medium text-blue-400 min-w-[300px] inline-block text-left">
               {displayText}
               <span className="animate-pulse">|</span>
             </span>
           </h2>
-          <p
-            className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed ${
-              isDark ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
+          <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-300">
             I build websites that look modern, work fast, and deliver exceptional user experiences. 
             Let's create something amazing together.
           </p>
@@ -111,18 +98,14 @@ export default function DeveloperHeroSection({ isDark }) {
           <Button
             variant="outline"
             size="lg"
-            className={`px-8 py-3 rounded-2xl backdrop-blur-xl transition-all duration-300 hover:scale-105 ${
-              isDark
-                ? "border-white/20 text-white hover:bg-white/10"
-                : "border-black/20 text-gray-900 hover:bg-black/5"
-            }`}
+            className="px-8 py-3 rounded-2xl backdrop-blur-xl transition-all duration-300 hover:scale-105 border-white/20 text-white hover:bg-white/10"
           >
             <Download className="w-5 h-5 mr-2" />
             Download Resume
           </Button>
         </motion.div>
 
-        {/* ✅ Flecha animada hacia la sección "about" */}
+        {/* ✅ Flecha animada hacia "about" */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -133,9 +116,7 @@ export default function DeveloperHeroSection({ isDark }) {
             onClick={scrollToAbout}
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className={`p-2 rounded-full backdrop-blur-xl ${
-              isDark ? "text-white/70 hover:text-white" : "text-gray-600 hover:text-gray-900"
-            }`}
+            className="p-2 rounded-full backdrop-blur-xl text-white/70 hover:text-white"
           >
             <ChevronDown className="w-6 h-6" />
           </motion.button>
